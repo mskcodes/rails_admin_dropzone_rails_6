@@ -30,7 +30,7 @@ class Photo < ActiveRecord::Base
 end
 ```
 
-The gem will search for the first model that is in a `has_many` attribute and get the first uploader, **in case the gem is not uploading correctly**, you can add this method `create_associated_image` in your model to set the model and attribute that will upload the images as the example below. *This method is not necessary, only if is not uploading correctly*
+The gem will search for the first model that is in a `has_many` attribute and get the first uploader, **in case the gem is not uploading correctly**, you can add this method `create_associated_image` in your model to set the model and attribute that will upload the images as the example below. *This method is not necessary, only if is not uploading correctly*.
 
 ```ruby
 class Album < ActiveRecord::Base
