@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "RailsAdmin dropzone.js for Rails 6"
   spec.description   = "Easy to use integration of drag&drop files upload via dropzone.js for RailsAdmin with improvements"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/thefalked/rails_admin_dropzone_rails_6"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
@@ -26,10 +26,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "simple_form", "~> 5.0.2"
-  spec.add_dependency "dropzonejs-rails", "~> 5.7.1"
+  spec.add_dependency "dropzonejs-rails", "~> 0.8.5"
   spec.add_dependency "jquery-rails"
 
   spec.add_development_dependency "rails", "~> 6.0.3", ">= 6.0.3.3"
   spec.add_development_dependency "bundler", "~> 2.1.4"
-  spec.add_development_dependency "rake", "~> 10.0"
 end

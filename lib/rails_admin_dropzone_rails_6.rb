@@ -1,7 +1,7 @@
 require "simple_form"
-require "rails_admin_dropzone/engine"
+require "rails_admin_dropzone_rails_6/engine"
 
-module RailsAdminDropzone
+module RailsAdminDropzoneRails6
 end
 
 require "rails_admin/config/actions"

@@ -1,8 +1,6 @@
 # RailsAdminDropzoneRails6
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rails_admin_dropzone_rails_6`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Easy to use integration of drag&drop files upload via dropzone.js for rails_admin in rails 6. This gem is an update of [rails_admin_dropzone](https://github.com/luizpicolo/rails_admin_dropzone)
 
 ## Installation
 
@@ -22,7 +20,48 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class Album < ActiveRecord::Base
+  has_many :photos
+end
+
+class Photo < ActiveRecord::Base
+  belongs_to :album
+end
+```
+
+The gem will search for the first model that is in a `has_many` attribute and get the first uploader, **in case the gem is not uploading correctly**, you can add this method `create_associated_image` in your model to set the model and attribute that will upload the images as the example below. *This method is not necessary, only if is not uploading correctly*
+
+```ruby
+class Album < ActiveRecord::Base
+  has_many :photos
+
+  # Method
+  def create_associated_image(image)
+    photos.create(image: image)
+  end
+end
+```
+
+Add in `config/initialisers/rails_admin.rb`
+
+```ruby
+RailsAdmin.config do |config|
+  config.actions do
+    dashboard
+    index
+    new
+
+    dropzone do
+      only YOUR_MODEL # Example Album
+    end
+
+    show
+    edit
+    delete
+  end
+end
+```
 
 ## Development
 
