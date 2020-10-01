@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "simple_form", "~> 5.0.2"
   spec.add_dependency "dropzonejs-rails", "~> 0.8.5"
-  spec.add_dependency "jquery-rails"
+  spec.add_dependency 'jquery-rails', ['>= 3.0', '< 5']
 
   spec.add_development_dependency "rails", "~> 6.0.3", ">= 6.0.3.3"
   spec.add_development_dependency "bundler", "~> 2.1.4"
