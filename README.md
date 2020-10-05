@@ -1,5 +1,7 @@
 # RailsAdminDropzoneRails6
 
+[![Gem Version](https://badge.fury.io/rb/rails_admin_dropzone_rails_6.svg)](https://badge.fury.io/rb/rails_admin_dropzone_rails_6)
+
 Easy to use integration of drag&drop files upload via dropzone.js for rails_admin in rails 6. This gem is an update of [rails_admin_dropzone](https://github.com/luizpicolo/rails_admin_dropzone)
 
 ## Installation
